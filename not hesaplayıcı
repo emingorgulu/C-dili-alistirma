@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+int notlar[5][4];
+    float ortalama;
+
+    for (int i = 0; i < 5; i++) {
+        printf("%d. ogrencinin 4 notunu giriniz: ", i + 1);
+        for (int j = 0; j < 4; j++) {
+            scanf("%d", &notlar[i][j]);
+        }
+    }
+
+    for (int i = 0; i < 5; i++) {
+        ortalama = 0;
+        for (int j = 0; j < 4; j++) {
+            ortalama += notlar[i][j];
+        }
+        ortalama /= 4.0;
+        printf("%d. ogrencinin ortalamasi: %.2f -> %s\n", i+1, ortalama,
+               (ortalama < 50) ? "Kaldi" : "Gecti");
+    }
+}
