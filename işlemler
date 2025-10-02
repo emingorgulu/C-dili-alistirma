@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int a, b;
+    printf("Iki sayi giriniz: ");
+    scanf("%d %d", &a, &b);
+
+    printf("Toplam: %d\n", a + b);
+    printf("Fark: %d\n", a - b);
+    printf("Carpim: %d\n", a * b);
+    if (b != 0)
+        printf("Bolum: %f\n",(float) a / b);
+    else
+        printf("tanimsiz\n");
+}
